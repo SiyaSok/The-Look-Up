@@ -1,38 +1,210 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	text-align: center;
+	overflow: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+.navbar {
+	background-color: #000000;
+}
+
+.header {
+	max-height: 86.8vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.header .overlay {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 30%;
+	margin: auto;
+	text-align: center;
+}
+.header .overlay h2 {
+	color: #7acefa;
+	font-size: 5vw;
+	line-height: 1.4;
+}
+.header .overlay p {
+	color: #fff;
+	font-size: 1.7vw;
+	line-height: 1.4;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #7acefa;
+}
+.Track {
+	position: relative;
+	cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Track .Track-img {
+	object-fit: contain;
+}
+.Track .Track-text {
+	background-color: #000;
+	color: #fff;
+	padding: 5px;
+}
+
+.Track .Track-icon {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 30%;
+}
+
+.Track .Track-icon span {
+	background: #ffffff94;
+	padding: 7.5% 7.5% 9% 7.5%;
+	width: 11%;
+	height: 20%;
+}
+.Track .Track-icon span .icon {
+	width: 8%;
+}
+
+.Artist-img {
+	object-fit: contain;
+}
+
+.card-img,
+.card-img-top {
+	position: relative;
+}
+.card-title {
+	margin-bottom: .75rem;
+	font-size: 0.7rem;
+}
+.card-body {
+	flex: 1 1 auto;
+	min-height: 1px;
+	padding: 1.25rem;
+	position: absolute;
+	bottom: 0;
+	background-color: #ffffffcf;
+	width: 100%;
+	text-align: left;
+}
+.card-body p.m-0 {
+	font-size: 1vw;
+}
+.form-control {
+	display: block;
+	width: 70% !important;
+}
+.row.Search {
+	justify-content: flex-end;
+}
+
+.logo {
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+}
+.logo h1 {
+	color: #fff;
+	font-weight: 700;
+	font-size: 3.5vw;
+}
+.logo h1 span {
+	color: #7acefa;
+}
+.logo img {
+	width: 10%;
+}
+.Search .btn.btn-primary {
+	background-color: #7acefa;
+}
+.Search .btn.btn-primary:hover {
+	background-color: #fff !important;
+	color: #7acefa;
+}
+.Artist-info {
+	text-align: left;
+	padding-top: 1rem;
+}
+.Artist-info h2 {
+	font-size: 3rem;
+}
+.Artist-info p {
+	text-transform: capitalize;
+}
+
+.Artist-info p span {
+	font-weight: 700;
+}
+.Track .card,
+.Artist-img .img-thumbnail {
+	border: 1px solid #000;
+	padding: 0.5rem;
+}
+.Track .card .card-body {
+	flex: 1 1 auto;
+	min-height: 1px;
+	padding: 1.25rem;
+	position: absolute;
+	bottom: 0;
+	background-color: #ffffffcf;
+	width: 95%;
+	text-align: left;
+}
+
+@media (max-width: 767px) {
+	.logo {
+		display: flex;
+		margin: 0 auto;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+	.logo h1 {
+		color: #fff;
+		font-size: 9.5vw;
+	}
+	.Artist-info {
+		text-align: center;
+		padding-top: 1rem;
+	}
+	.card-title {
+		margin-bottom: .75rem;
+		font-size: 5vw;
+	}
+	.card-body p.m-0 {
+		font-size: 4vw;
+	}
+	.Track .card .card-body {
+		width: 98%;
+	}
+	.header .overlay h2 {
+		font-size: 13vw;
+	}
+	.header .overlay p {
+		font-size: 4.7vw;
+		line-height: 1.2;
+		width: 80%;
+		margin: auto;
+	}
+	.form-control {
+		width: 65% !important;
+	}
 }
